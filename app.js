@@ -7,15 +7,19 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
+ctx.lineWidth = 100;
 
 //flag to see if 
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
+let hue = 0;
 
 function draw(e){
     if(!isDrawing) return;// stop function from running if mouse is not down.
     console.log(e);
+    hue= Math.floor(Math.random()*365);
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
     ctx.beginPath();
     //Starts from 
     ctx.moveTo(lastX,lastY);
