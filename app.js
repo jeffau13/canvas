@@ -6,7 +6,8 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 100;
+ctx.lineWidth = Math.floor(Math.random()*100);
+ctx.globalCompositeOperation = 'hue';
 
 //flag to see if
 let isDrawing = false;
